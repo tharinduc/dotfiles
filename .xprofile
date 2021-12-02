@@ -1,2 +1,3 @@
 xbacklight -set 25% &
+xcompmgr -c &
 feh --no-fehbg --bg-scale '/home/tharindu/Downloads/pexels-pixabay-268533.jpg' &

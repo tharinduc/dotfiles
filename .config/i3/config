@@ -192,3 +192,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 && $refresh
 # Use brightnessctl to adjust the keyboard backlight brightness
 bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl -d smc::kbd_backlight set +10% && $refresh_i3status
 bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl -d smc::kbd_backlight set 10%- && $refresh_i3status
+
+for_window [class=".*"] border pixel 0
+gaps inner 10
+gaps outer 0
