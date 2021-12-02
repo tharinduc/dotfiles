@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xbacklight -set 25%
+
+feh --no-fehbg --bg-scale '/home/tharindu/Downloads/pexels-pixabay-268533.jpg'
