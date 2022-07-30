@@ -29,6 +29,11 @@ Plug 'sainnhe/edge'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
+" Statusline
+Plug 'nvim-lualine/lualine.nvim'
+" Icons for the statusline
+Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
 
 " Important!!
@@ -47,5 +52,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" load the Statusline
+lua require('statusline')
+
 " load lsp config lua file
 lua require('lsp-config')
+
+" open vim in working directory
+"augroup cdpwd
+"    autocmd!
+"    autocmd VimEnter * cd $PWD
+"augroup END
