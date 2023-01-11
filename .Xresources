@@ -1,3 +1,6 @@
+!scale the display by 125%
+Xft.dpi: 120
+
 URxvt.depth: 32
 !URxvt.background: [90]#000000
 URxvt.background: rgba:0000/0000/0200/c800
@@ -11,4 +14,8 @@ URxvt.cursorUnderline: false
 
 URxvt.internalBorder: 10
 
-URxvt.font: xft:Dejavu Sans Mono:size=14
+URxvt.font: xft:Dejavu Sans Mono:size=14,xft:FiraCode Nerd Font Mono:style=Retina,Regular
+!URxvt.font: xft:Symbols Nerd Font Mono:size=14
+!,xft:devicons:size=14,xft:Dejavu Sans Mono:size=14
+!URxvt.font: xft:Dejavu Sans Mono:size=14,xft:Symbols Nerd Font Mono
+!URxvt.font: xft:Dejavu Sans Mono:size=14,xft:Symbols Nerd Font Mono:size=14,xft:devicons:size=14

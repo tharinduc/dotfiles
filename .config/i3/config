@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -39,7 +39,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -179,6 +179,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Lock screen
+bindsym $mod+x exec i3lock -c 000000
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -186,13 +189,13 @@ bar {
 }
 
 # Use xbacklight to adjust brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 && $refresh_i3status
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d amdgpu_bl0 set +3% && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d amdgpu_bl0 set 3%- && $refresh_i3status
 
-# Use brightnessctl to adjust the keyboard backlight brightness
-bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl -d smc::kbd_backlight set +10% && $refresh_i3status
-bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl -d smc::kbd_backlight set 10%- && $refresh_i3status
-
-for_window [class=".*"] border pixel 0
+for_window [class="."] border pixel 0
 gaps inner 10
 gaps outer 0
+
+# Workspace assignments. (class names are taken using xprop)
+assign [class="URxvt"] 1
+assign [class="Google-chrome"] 2
