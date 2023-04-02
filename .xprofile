@@ -1,4 +1,1 @@
-#disable beep sound from the laptop speaker
-xset -b &
-#picom -c &
-feh --no-fehbg --bg-scale '/home/tharindu/Downloads/pexels-pixabay-268533.jpg' &
+/home/tharindu/.xprofile
