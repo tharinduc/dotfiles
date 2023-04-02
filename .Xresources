@@ -1,1 +1,52 @@
-/home/tharindu/.Xresources
+!scale the display by 120%
+Xft.dpi: 120
+
+*color0:  #2E3436
+*color1:  #FCE94F
+*color2:  #8AE234
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #ff0070
+*color11: #4E9A06
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+URxvt.depth: 32
+!URxvt.background: [90]#000000
+URxvt.background: rgba:0000/0000/0200/c800
+
+!URxvt.foreground: #28fe14
+URxvt.foreground: #98D1CE
+URxvt.cursorColor: #28fe14
+
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+
+URxvt.internalBorder: 10
+
+URxvt.font: xft:Dejavu Sans Mono:size=14,xft:FiraCode Nerd Font Mono:style=Retina,Regular
+
+!perl extensions
+URxvt.perl-ext-common: default,url-select,matcher,selection-to-clipboard,resize-font
+
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+URxvt.keysym.C-Down:  resize-font:smaller
+URxvt.keysym.C-Up:    resize-font:bigger
