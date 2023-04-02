@@ -12,6 +12,7 @@ set number
 set background=dark
 set sb
 set spr
+set guicursor=i:block-blinkwait175-blinkoff400-blinkon250
 
 call plug#begin('~/.vim/plugged')
 
