@@ -2,7 +2,7 @@
 Xft.dpi: 120
 
 *color0:  #2E3436
-*color1:  #FCE94F
+*color1:  #ff0070
 *color2:  #8AE234
 *color3:  #C4A000
 *color4:  #3465A4
@@ -11,8 +11,8 @@ Xft.dpi: 120
 *color7:  #babdb9
 *color8:  #555753
 *color9:  #EF2929
-*color10: #ff0070
-*color11: #4E9A06
+*color10: #4E9A06
+*color11: #FCE94F
 *color12: #729FCF
 *color13: #AD7FA8
 *color14: #fcaf3e

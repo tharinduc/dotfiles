@@ -62,11 +62,14 @@ let mapleader = ' '
 " Stop copying the replacing string
 xnoremap("<leader>p", "\"_dp")
 
+" Replace word under the cursor
+:nnoremap <leader>r :%s/\<<C-r><C-w>\>/
+
 "" Copy to system clipboard
-"nnoremap("<leader>y", "\"+y")
-"vnoremap("<leader>y", "\"+y")
-"nnoremap("<leader>d", "\"_d")
-"vnoremap("<leader>d", "\"_d")
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+nnoremap("<leader>d", "\"_d")
+vnoremap("<leader>d", "\"_d")
 
 " Move cursor to the middle when Ctrl+u/d
 nnoremap("<C-d>", "<C-d>zz")
